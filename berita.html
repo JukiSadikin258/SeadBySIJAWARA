@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./assets/logo.png" type="image/png">
+  <title>Berita Sead</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#53DD37',
+                        secondary: '#FF6D00',
+                        'primary-dark': '#3E9F2B',
+                        'primary-light': '#C0EAB7',
+                        'secondary-light': '#F8B600',
+                        softabu : '#F4F4F6',
+                        hitam : '#010101',
+                        putih : '#F9F9F9',
+                        'warna-latar': '#FFF6E3',
+                    },
+                    fontFamily: {
+                        poppins : ['Poppins', 'sans-serif'],
+                        spicy : ['Spicy Rice', 'cursive'],
+                    },
+                }
+            }
+        }
+    </script>
+
+  <style>
+    @font-face {
+      font-family: 'Poppins';
+      src: url('./assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Poppins';
+      src: url('./assets/fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+      font-weight: 600;
+      font-style: semibold;
+    }
+    
+    @font-face {
+      font-family: 'Spicy Rice';
+      src: url('./assets/fonts/Spicy_Rice/SpicyRice-Regular.ttf') format('truetype');
+      font-weight: 700;
+      font-style: bold;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+
+    ::-webkit-scrollbar {
+      width: 10px
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #53DD37;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #3E9F2B;
+    }
+
+  </style>
+
+</head>
+<body class="bg-warna-latar font-poppins overflow-x-hidden">
+
+
+  <header class="relative w-full max-w-screen overflow-x-hidden h-24 bg-cover bg-primary/30 bg-center px-4"
+    style="background-image: url(assets/image/navcalc.png); box-shadow: 0 8px 10px -2px rgba(0,0,0,0.25)">
+
+    <img src="./assets/image/penabgcalc.png" alt="Background" class="absolute inset-0 w-full h-full object-cover opacity-40" />
+
+    <img src="./assets/image/bgCatPutih.png" alt="" class="absolute left-1/2 -translate-x-1/2 top-6 h-14 object-contain z-10" />
+
+    <div class="relative w-full h-full grid grid-cols-3">
+      <a href="./index.html" class="text-prbg-primary-dark hover:text-green-800 font-semibold text-sm sm:text-base pl-2 mt-4 z-20"> ← Kembali </a>
+
+      <h1 class="text-center my-auto text-2xl md:text-4xl font-spicy font-bold text-black z-20"> Berita<span class="text-[#3E9F2B]">Se</span><span class="text-[#53DD37]">ad</span></h1>
+    </div>
+  </header>
+
+
+  <!-- Section Pengenalan Sead -->
+  <div class="w-full px-6 md:px-20 py-10 max-w-screen-xl mx-auto">
+    <h1 class="text-4xl text-center font-spicy font-bold text-primary-dark mb-6">Mengapa harus Sead?</h1>
+    <p class="text-center text-gray-800 md:text-lg">
+      <span class="text-primary-dark font-medium">Sead,</span> singkatan dari <b>Senin Absen Daging,</b> adalah langkah kecil dengan dampak besar. Dengan tidak mengonsumsi daging satu hari dalam seminggu, kamu membantu mengurangi jejak karbon, menghemat air bersih, dan menjaga kelestarian bumi
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 lg:gap-6 mt-10">
+
+      <div class="bg-white p-6 rounded-lg shadow-lg text-center border-2 border-primary hover:-translate-y-2 transition-transform duration-300 group">
+        <img src="./assets/image/bumi.png" alt="Bumi" class="w-24 h-24 object-cover mx-auto mb-4">
+        <!-- https://share.google/images/VrZpSbsiHAW1aqyLN -->
+        <h2 class="text-lg font-semibold text-primary">Emisi Gas Rumah Kaca</h2>
+        <p class="text-sm text-gray-800 group-hover:text-hitam">Produksi daging menyumbang hingga 14,5% emisi gas rumah kaca global. Satu porsi daging sapi = 27 kg CO₂. Sead bantu kurangi emisi!</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg text-center border-2 border-blue-500 hover:-translate-y-2 transition-transform duration-300 group">
+        <img src="./assets/image/keranAir.png" alt="Air" class="w-24 h-24 object-cover mx-auto mb-4 rounded-full">
+        <h2 class="text-lg font-semibold text-blue-500">Konsumsi Air</h2>
+        <p class="text-sm text-gray-800 group-hover:text-hitam">Satu burger daging sapi membutuhkan lebih dari 2.500 liter air. Bayangkan jika kamu menghematnya hanya dengan absen daging setiap Senin.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg text-center border-2 border-secondary hover:-translate-y-2 transition-transform duration-300 group">
+        <img src="./assets/image/padi.png" alt="padi.png" class="w-24 h-24 object-cover mx-auto mb-4 rounded-full">
+        <h2 class="text-lg font-semibold text-secondary">Penggunaan Lahan</h2>
+        <p class="text-sm text-gray-800 group-hover:text-hitam">77% lahan pertanian digunakan untuk peternakan, padahal hasilnya hanya 18% dari kalori global. Sead ikut selamatkan ruang hijau!</p>
+      </div>
+    </div>
+
+    <p class="text-center text-hitam mt-6 md:mt-10">
+      Setiap piring tanpa daging adalah langkah kecil untuk perubahan besar. Tahukah kamu bahwa dengan tidak makan daging satu hari saja, kamu bisa <b>menghemat ribuan liter air</b> dan <b>mengurangi emisi gas rumah kaca?</b> Lewat kalkulator ini, lihat sendiri seberapa besar kontribusimu dan orang di sekitarmu untuk bumi hanya dengan ikut gerakan <span class="text-primary-dark font-semibold">Sead</span>
+    </p>
+  </div>
+
+
+
+
+  <!-- Section peerbandingan makanan dengan jumlah galon air yg digunakan dalam produksi makanannya -->
+  <section id="perbandingan" class="px-6 sm:px-10 md:px-20 py-16 overflow-x-hidden">
+    <h1 class="font-spicy font-bold text-center mb-8 text-3xl md:text-4xl text-[#3E9F2B]">Tahukah Kamu?</h1>
+
+    <div id="perbandinganGrid" class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+      <!-- Gambar makanan dibuat di Canva: https://www.canva.com/design/DAGwnQojQbs/qdcinAZeewWA2z1ZE123xg/edit -->
+      <!-- Gambar galon: https://share.google/images/FYlgahhcuSPWt3r7h -->
+    </div>
+  </section>
+
+
+
+
+  <section id="berita" class="py-12 px-6 md:px-12 relative">
+    <h2 class="font-bold font-spicy text-center mb-4 md:mb-8 text-shadow-lg text-shadow-primary text-2xl md:text-4xl text-primary-dark">
+      Berita Terkini
+    </h2>
+
+    <!-- Tombol Kanan/Kiri -->
+    <button id="scrollLeft" class="hidden md:flex items-center justify-center absolute left-4 top-1/2 -translate-y-1/2 bg-primary hover:bg-primary-dark text-white w-10 h-10 rounded-full shadow-md z-20">
+      &#10094;
+    </button>
+    <button id="scrollRight" class="hidden md:flex items-center justify-center absolute right-4 top-1/2 -translate-y-1/2 bg-primary hover:bg-primary-dark text-white w-10 h-10 rounded-full shadow-md z-20">
+      &#10095;
+    </button>
+
+    <div class="relative">
+      <div class="absolute left-0 top-0 h-full w-12 bg-gradient-to-r from-warna-latar to-transparent pointer-events-none z-10"></div>
+      <div class="absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-warna-latar to-transparent pointer-events-none z-10"></div>
+
+
+      <div id="scrollContainer" class="flex space-x-6 overflow-x-auto pb-4 px-4 scrollbar-hide scroll-smooth">
+      
+        <div class="flex-shrink-0 w-72 h-96 bg-white rounded-2xl shadow-md overflow-hidden group ">
+          <img src="assets/image/tubuhsehat.jpg" alt="Tubuh Sehat" class="w-full h-44 object-cover">
+          <!-- https://share.google/images/Bu3TicPy2Iy9PqaJr -->
+          <div class="p-5">
+            <h3 class="text-xl font-semibold text-primary-dark mb-2">
+              Makanan Sehat, Hidup Lebih Ringan
+            </h3>
+            <p class="text-sm text-gray-700 group-hover:text-hitam leading-relaxed">
+              Konsumsi buah, sayur, dan biji-bijian terbukti menurunkan risiko penyakit jantung serta menjaga energi tubuh sepanjang hari.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex-shrink-0 w-72 h-96 bg-white rounded-2xl shadow-md overflow-hidden group ">
+          <img src="./assets/image/tanampohon.png" alt="Reboisasi" class="w-full h-44 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-semibold text-primary-dark mb-2">
+            <!-- https://share.google/images/9MuWbIiiXtFcqvu8L -->
+              Menjaga Hutan untuk Masa Depan
+            </h3>
+            <p class="text-sm text-gray-700 group-hover:text-hitam leading-relaxed">
+              Aksi reboisasi mendukung keberlanjutan lingkungan dan membantu mengurangi emisi karbon.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex-shrink-0 w-72 h-96 bg-white rounded-2xl shadow-md overflow-hidden group ">
+          <img src="./assets/image/kolestrol.jpg" alt="Tinggi Kolestrol" class="w-full h-44 object-cover">
+          <!-- https://share.google/images/5MVJtZO2CTcmCumFP -->
+          <div class="p-5">
+            <h3 class="text-xl font-semibold text-primary-dark mb-2">
+              Dampak Daging Merah bagi Kesehatan
+            </h3>
+            <p class="text-sm text-gray-700 group-hover:text-hitam leading-relaxed">
+              Konsumsi daging merah berlebihan meningkatkan risiko kolesterol, diabetes, dan penyakit kronis. Pengurangan porsinya berdampak positif.
+            </p>
+          </div>
+        </div>
+        
+        <div class="flex-shrink-0 w-72 h-96 bg-white rounded-2xl shadow-md overflow-hidden group ">
+          <img src="./assets/image/festivalkuliner.jpg" alt="Makanan Nabati" class="w-full h-44 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-semibold text-primary-dark mb-2">
+              Kurangi Emisi, Mulai dari Piring
+            </h3>
+            <p class="text-sm text-gray-700 group-hover:text-hitam leading-relaxed">
+              Produksi daging menyumbang emisi karbon tinggi. Dengan lebih banyak makan nabati, kita bisa menekan jejak karbon pribadi.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex-shrink-0 w-72 h-96 bg-white rounded-2xl shadow-md overflow-hidden group ">
+          <img src="./assets/image/dampakpositif.jpg" alt="" class="w-full h-44 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-semibold text-primary-dark mb-2">
+              Satu Hari Tanpa Daging
+            </h3>
+            <p class="text-sm text-gray-700 group-hover:text-hitam leading-relaxed">
+              Gerakan Senin Absen Daging mengajak kita mengurangi daging seminggu sekali. Efeknya besar untuk kesehatan dan lingkungan.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex-shrink-0 w-72 h-96 bg-white rounded-2xl shadow-md overflow-hidden group ">
+          <img src="./assets/image/papanSehat.svg" alt="Makanan Nabati" class="w-full h-44 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-semibold text-primary-dark mb-2">
+              Makanan Nabati untuk Energi
+            </h3>
+            <p class="text-sm text-gray-700 group-hover:text-hitam leading-relaxed">
+              Menggantikan daging merah dengan makanan nabati dapat meningkatkan imun sekaligus mengurangi resiko kolestrol.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- Section CTA Join Komunitas -->
+  <section class="relative bg-primary-light pt-6 pb-10 px-6 sm:px-10 lg:px-16 rounded-t-[75px]">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
+
+      <div class="space-y-6 text-center lg:text-left">
+        <h2 class="text-3xl sm:text-4xl font-bold text-hitam leading-tight">
+          Bergabung dengan <span class="text-primary-dark">Komunitas SEAD</span>
+        </h2>
+        <p class="text-lg text-hitam max-w-xl mx-auto lg:mx-0">
+          Jadi bagian dari gerakan positif untuk menciptakan perubahan nyata. 
+          Dapatkan inspirasi, dukungan, dan koneksi dengan orang-orang yang 
+          memiliki visi sama untuk masa depan berkelanjutan.
+        </p>
+        <div>
+          <a href="https://whatsapp.com/channel/0029VbB9LijFMqrVl63nIV1R" target="_blank"
+            class="inline-block px-6 sm:px-8 py-2 sm:py-3 text-white rounded-xl bg-gradient-to-r from-primary-dark via-primary to-primary-dark hover:scale-105 cursor-pointer transition-all duration-300">
+            Gabung Sekarang
+          </a>
+        </div>
+      </div>
+
+      <div class="flex justify-center lg:justify-end">
+        <img src="./assets/image/community.png" alt="Komunitas SEAD" class="w-64 sm:w-80 lg:w-96 drop-shadow-lg" />
+          <!-- sc: https://www.flaticon.com/free-icon/community_17811354?term=community&page=1&position=10&origin=search&related_id=17811354 -->
+      </div>
+    </div>
+  </section>
+
+
+
+  <script src="./scripts/dataPerbandingan.js"></script>
+
+
+
+</body>
+</html>

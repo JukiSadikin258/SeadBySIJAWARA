@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      primary: '#53DD37',
+                      secondary: '#FF6D00',
+                      'primary-dark': '#3E9F2B',
+                      'primary-light': '#C0EAB7',
+                      'secondary-light': '#F8B600',
+                      softabu : '#F4F4F6',
+                      hitam : '#010101',
+                      putih : '#F9F9F9',
+                      'warna-latar': '#FFF6E3',
+                  },
+                  fontFamily: {
+                      poppins : ['Poppins', 'sans-serif'],
+                      spicy : ['Spicy Rice', 'cursive'],
+                  },
+              }
+          }
+      }
+  </script>
+
+  <style>
+    @font-face {
+      font-family: 'Poppins';
+      src: url('./assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Poppins';
+      src: url('./assets/fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+      font-weight: 600;
+      font-style: semibold;
+    }
+    
+    @font-face {
+      font-family: 'Spicy Rice';
+      src: url('./assets/fonts/Spicy_Rice/SpicyRice-Regular.ttf') format('truetype');
+      font-weight: 700;
+      font-style: bold;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+
+    ::-webkit-scrollbar {
+      width: 10px
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #53DD37;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #3E9F2B;
+    }
+  </style>
+
+    <link rel="icon" href="./assets/logo.png" type="image/png">
+    <title>Sead</title>
+</head>
+
+
+<body class="relative bg-warna-latar font-poppins">
+
+  <!-- Header -->
+  <header class="relative w-full max-w-screen overflow-x-hidden h-24 bg-cover bg-primary/30 bg-center px-4"
+    style="background-image: url(assets/image/navcalc.png); box-shadow: 0 8px 10px -2px rgba(0,0,0,0.25)">
+
+    <img src="./assets/image/penabgcalc.png" alt="Background" class="absolute inset-0 w-full h-full object-cover opacity-40" />
+
+    <img src="./assets/image/bgCatPutih.png" alt="" class="absolute left-1/2 -translate-x-1/2 top-6 h-14 object-contain z-10" />
+
+    <div class="relative w-full h-full grid grid-cols-3">
+      <a href="./index.html" class="text-green-700 hover:text-green-800 font-semibold text-sm sm:text-base pl-2 mt-4 z-20"> ← Kembali </a>
+
+      <h1 class="text-center my-auto text-2xl md:text-4xl font-spicy font-bold text-black z-20"> Resep<span class="text-[#3E9F2B]">Se</span><span class="text-[#53DD37]">ad</span></h1>
+    </div>
+  </header>
+
+
+  <!-- Section Gudang Resep -->
+  <section id="menuresep" class="px-4 sm:px-6 md:px-10 lg:px-20 my-16 overflow-x-hidden">
+    <h1 class="font-bold font-spicy text-center mb-8 text-shadow-lg text-shadow-primary text-4xl sm:text-5xl lg:text-6xl xl:text-[72px] text-primary-dark">Gudang Resep</h1>
+
+    <div class="p-4 mb-4 bg-primary/10 rounded-lg max-w-6xl mx-auto">
+      <p class="text-hitam">Selamat datang di <span class="text-primary-dark font-semibold">Gudang Resep SEAD!</span> Di sini, kami percaya bahwa makan enak tidak harus selalu pakai daging. Kumpulan resep ini akan membuktikan bahwa hidangan nabati bisa jadi lebih lezat, kreatif, dan pastinya ramah lingkungan. Setiap resep dirancang untuk pemula hingga ahli, dengan bahan yang mudah ditemukan dan langkah yang simpel. Siap-siap terkejut dengan rasa autentik yang tidak kalah dari versi dagingnya, sambil Anda berkontribusi pada planet yang lebih sehat. Yuk, eksplorasi menu-menu favorit baru Anda dan buat Senin Anda lebih istimewa!</p>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 grid-rows-3 gap-4 sm:gap-6 ">
+
+      <div class="group col-span-1 sm:col-span-2 lg:col-span-2 lg:row-span-2 relative w-full h-64 sm:h-80 lg:h-full overflow-hidden rounded-2xl bg-white shadow-lg flex flex-col justify-center items-center hover:scale-[101%] transition duration-500">
+        <img src="./assets/image/SambelKentang.jpg" alt="Sambel Kentang" class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-500">
+        <!-- https://share.google/images/wpWBo0Sa750xyWPqL -->
+        <div class="absolute w-full h-full bg-primary-dark/30 flex flex-col items-center justify-center -top-80 group-hover:top-0 opacity-0 group-hover:opacity-100 transition-all duration-500 z-10">
+          <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-4 sm:mb-6 text-center">Sambel Kentang</h2>
+          <a href="./assets/resep/sambelgorengkentang.jpg" download>
+            <button class="px-4 py-2 bg-primary-dark hover:bg-primary rounded-md text-white text-xs sm:text-sm flex items-center gap-2">
+            <i class="fa-solid fa-download"></i> Unduh Resep
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <div class="group relative w-full h-64 sm:h-80 overflow-hidden rounded-2xl bg-white shadow-lg flex flex-col justify-center items-center hover:scale-[101%] transition duration-500">
+        <img src="./assets/image/semur.jpg" alt="Semur Tahu Kentang" class="absolute w-full h-full object-cover rounded-2xl opacity-90 group-hover:opacity-100 transition duration-500">
+        <!-- https://share.google/images/M4nnXEGtCPqeYkcHN -->
+        <div class="absolute w-full h-full bg-primary-dark/30 flex flex-col items-center justify-center -bottom-80 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+          <h2 class="text-lg sm:text-xl md:text-2xl font-semibold text-white mb-4 sm:mb-6 text-center">Semur Tahu Kentang</h2>
+          <a href="./assets/resep/semurtahukentang.jpg" download>
+            <button class="px-4 py-2 bg-primary-dark hover:bg-primary rounded-md text-white text-xs sm:text-sm flex items-center gap-2">
+            <i class="fa-solid fa-download"></i> Unduh Resep
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <div class="group relative w-full h-64 sm:h-80 overflow-hidden rounded-2xl bg-white shadow-lg flex flex-col justify-center items-center hover:scale-[101%] transition duration-500">
+        <img src="./assets/image/PerkedelKentang.jpg" alt="Perkedel Kentang" class="w-full h-full object-cover rounded-2xl opacity-90 group-hover:opacity-100 transition duration-500">
+        <!-- https://share.google/images/USoMnvIxqxiQ28Wyv -->
+        <div class="absolute w-full h-full bg-primary-dark/30 flex flex-col items-center justify-center -top-80 group-hover:top-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+          <h2 class="text-lg sm:text-xl md:text-2xl font-semibold text-white mb-4 sm:mb-6 text-center">Perkedel Kentang</h2>
+          <a href="./assets/resep/perkedel kentang.jpg" download>
+            <button class="px-4 py-2 bg-primary-dark hover:bg-primary rounded-md text-white text-xs sm:text-sm flex items-center gap-2">
+            <i class="fa-solid fa-download"></i> Unduh Resep
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <div class="group relative w-full h-64 sm:h-80 overflow-hidden rounded-2xl bg-white shadow-lg flex flex-col justify-center items-center hover:scale-[101%] transition duration-500">
+        <img src="./assets/image/SateJamur.jpg" alt="Sate Jamur" class="w-full h-full object-cover rounded-2xl opacity-90 group-hover:opacity-100 transition duration-500">
+        <!-- https://share.google/images/7qL3TuZKltsuy1Biw -->
+        <div class="absolute w-full h-full bg-primary-dark/30 flex flex-col items-center justify-center -bottom-80 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+          <h2 class="text-lg sm:text-xl md:text-2xl font-semibold text-white mb-4 sm:mb-6 text-center">Sate Jamur</h2>
+          <a href="./assets/resep/satejamur.jpg" download>
+            <button class="px-4 py-2 bg-primary-dark hover:bg-primary rounded-md text-white text-xs sm:text-sm flex items-center gap-2">
+            <i class="fa-solid fa-download"></i> Unduh Resep
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <div class="group relative w-full h-64 sm:h-80 overflow-hidden rounded-2xl bg-white shadow-lg flex flex-col justify-center items-center hover:scale-[101%] transition duration-500">
+        <img src="./assets/image/Papeda.jpg" alt="Papeda" class="w-full h-full object-cover rounded-2xl opacity-90 group-hover:opacity-100 transition duration-500">
+        <!-- https://share.google/images/6NqvwKVC0w2u37FQ4 -->
+        <div class="absolute w-full h-full bg-primary-dark/30 flex flex-col items-center justify-center -bottom-80 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+          <h2 class="text-lg sm:text-xl md:text-2xl font-semibold text-white mb-4 sm:mb-6 text-center">Papeda</h2>
+          <a href="./assets/resep/papeda.jpg" download>
+            <button class="px-4 py-2 bg-primary-dark hover:bg-primary rounded-md text-white text-xs sm:text-sm flex items-center gap-2">
+            <i class="fa-solid fa-download"></i> Unduh Resep
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <div class="group relative w-full h-64 sm:h-80 overflow-hidden rounded-2xl bg-white shadow-lg flex flex-col justify-center items-center hover:scale-[101%] transition duration-500">
+        <img src="./assets/image/nasi_tutug_oncom.jpg" alt="Nasi Tutug Oncom" class="w-full h-full object-cover rounded-2xl opacity-90 group-hover:opacity-100 transition duration-500">
+        <!-- https://share.google/images/aZG65bobERQHnAz3W -->
+        <div class="absolute w-full h-full bg-primary-dark/30 flex flex-col items-center justify-center -bottom-80 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+          <h2 class="text-lg sm:text-xl md:text-2xl font-semibold text-white mb-4 sm:mb-6 text-center">Nasi Tutug Oncom</h2>
+          <a href="./assets/resep/tutugoncom.jpg" download>
+            <button class="px-4 py-2 bg-primary-dark hover:bg-primary rounded-md text-white text-xs sm:text-sm flex items-center gap-2">
+            <i class="fa-solid fa-download"></i> Unduh Resep
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <div class="group relative w-full h-64 sm:h-80 overflow-hidden rounded-2xl bg-white shadow-lg flex flex-col justify-center items-center hover:scale-[101%] transition duration-500">
+        <img src="./assets/image/gado-gado.jpg" alt="Gado-gado" class="w-full h-full object-cover rounded-2xl opacity-90 group-hover:opacity-100 transition duration-500">
+        <!-- https://share.google/images/KtdrFGypCFuwqTQDf -->
+        <div class="absolute w-full h-full bg-primary-dark/30 flex flex-col items-center justify-center -bottom-80 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+          <h2 class="text-lg sm:text-xl md:text-2xl font-semibold text-white mb-4 sm:mb-6 text-center">Gado-gado</h2>
+          <a href="./assets/resep/gadogado.jpg" download>
+            <button class="px-4 py-2 bg-primary-dark hover:bg-primary rounded-md text-white text-xs sm:text-sm flex items-center gap-2">
+            <i class="fa-solid fa-download"></i> Unduh Resep
+          </button>
+          </a>
+        </div>
+      </div>
+
+      <div class="group relative col-span-1 sm:col-span-2 lg:col-span-2 lg:row-span-1 w-full h-64 sm:h-80 overflow-hidden rounded-2xl bg-white shadow-lg flex flex-col justify-center items-center hover:scale-[101%] transition duration-500">
+        <img src="./assets/image/SayurLodeh.jpg" alt="Sayur Lodeh" class="w-full h-full object-cover rounded-2xl opacity-90 group-hover:opacity-100 transition duration-500">
+        <!-- https://share.google/images/r5EtvNdu5fQoUxGnq -->
+        <div class="absolute w-full h-full bg-primary-dark/30 flex flex-col items-center justify-center -top-80 group-hover:top-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+          <h2 class="text-lg sm:text-xl md:text-2xl font-semibold text-white mb-4 sm:mb-6 text-center">Sayur Lodeh</h2>
+          <a href="./assets/resep/sayurlodeh.jpg" download>
+            <button class="px-4 py-2 bg-primary-dark hover:bg-primary rounded-md text-white text-xs sm:text-sm flex items-center gap-2">
+            <i class="fa-solid fa-download"></i> Unduh Resep
+          </button>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- Section CTA Join Komunitas -->
+  <section class="relative bg-primary-light pt-6 pb-10 px-6 sm:px-10 lg:px-16 rounded-t-[75px]">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
+
+      <div class="space-y-6 text-center lg:text-left">
+        <h2 class="text-3xl sm:text-4xl font-bold text-hitam leading-tight">
+          Bergabung dengan <span class="text-primary-dark">Komunitas SEAD</span>
+        </h2>
+        <p class="text-lg text-hitam max-w-xl mx-auto lg:mx-0">
+          Jadi bagian dari gerakan positif untuk menciptakan perubahan nyata. 
+          Dapatkan inspirasi, dukungan, dan koneksi dengan orang-orang yang 
+          memiliki visi sama untuk masa depan berkelanjutan.
+        </p>
+        <div>
+          <a href="https://whatsapp.com/channel/0029VbB9LijFMqrVl63nIV1R" target="_blank"
+            class="inline-block px-6 sm:px-8 py-2 sm:py-3 text-white rounded-xl bg-gradient-to-r from-primary-dark via-primary to-primary-dark hover:scale-105 cursor-pointer transition-all duration-300">
+            Gabung Sekarang
+          </a>
+        </div>
+      </div>
+
+      <div class="flex justify-center lg:justify-end">
+        <img src="./assets/image/community.png" alt="Komunitas SEAD" class="w-64 sm:w-80 lg:w-96 drop-shadow-lg" />
+          <!-- sc: https://www.flaticon.com/free-icon/community_17811354?term=community&page=1&position=10&origin=search&related_id=17811354 -->
+      </div>
+    </div>
+  </section>
+
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/logo.png" type="image/png">
+    <title>SeadBot</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#53DD37',
+                        secondary: '#FF6D00',
+                        'primary-dark': '#3E9F2B',
+                        'primary-light': '#C0EAB7',
+                        'secondary-light': '#F8B600',
+                        softabu : '#F4F4F6',
+                        hitam : '#010101',
+                        putih : '#F9F9F9',
+                        'warna-latar': '#FFF6E3',
+                    },
+                    fontFamily: {
+                        poppins : ['Poppins', 'sans-serif'],
+                        spicy : ['Spicy Rice', 'cursive'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @font-face {
+        font-family: 'Poppins';
+        src: url('./assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+        }
+        @font-face {
+        font-family: 'Poppins';
+        src: url('./assets/fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+        font-weight: 600;
+        font-style: semibold;
+        }
+        
+        @font-face {
+        font-family: 'Spicy Rice';
+        src: url('./assets/fonts/Spicy_Rice/SpicyRice-Regular.ttf') format('truetype');
+        font-weight: 700;
+        font-style: bold;
+        }
+
+        body {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #53DD37;
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #3E9F2B;
+    }
+
+    </style>
+</head>
+
+<body class="bg-warna-latar flex flex-col h-screen">
+
+    <header class="relative w-full max-w-screen overflow-x-hidden h-24 bg-cover bg-primary/30 bg-center px-4"
+        style="background-image: url(assets/image/navcalc.png); box-shadow: 0 8px 10px -2px rgba(0,0,0,0.25)">
+
+        <img src="./assets/image/penabgcalc.png" alt="Background" class="absolute inset-0 w-full h-full object-cover opacity-40" />
+
+        <img src="./assets/image/bgCatPutih.png" alt="" class="absolute left-1/2 -translate-x-1/2 top-6 h-14 object-contain z-10" />
+
+        <div class="relative w-full h-full grid grid-cols-3">
+        <a href="./index.html" class="text-green-700 hover:text-green-800 font-semibold text-sm sm:text-base pl-2 mt-4 z-20"> ← Kembali </a>
+
+        <h1 class="text-center my-auto text-2xl md:text-4xl font-spicy font-bold text-black z-20"><span class="text-[#3E9F2B]">Se</span><span class="text-[#53DD37]">ad</span>Bot</h1>
+        </div>
+    </header>
+
+    <!-- Chat Section -->
+    <main id="chatContainer" class="flex-1 overflow-y-auto p-4 space-y-4">
+
+        <div class="flex items-start">
+        <div class="bg-putih text-gray-800 p-3 rounded-xl max-w-lg shadow">
+            <i class="fa-solid fa-seedling text-primary mr-2"></i>
+            Hai! Aku <b>SeadBot</b>. Tanya apa saja seputar lingkungan, kesehatan, atau Sead 🌱
+        </div>
+        </div>
+    </main>
+
+    <footer class="bg-primary-light p-4 md:p-6 rounded-t-3xl flex items-center">
+        <input 
+        id="userInput" 
+        type="text" 
+        placeholder="Tanyakan Sesuatu..." 
+        class="flex-1 border rounded-lg px-4 py-3 mr-2 focus:outline-none focus:ring-2 focus:ring-primary bg-putih text-hitam"
+        />
+        <button id="sendBtn" class="bg-primary-dark hover:bg-primary text-white px-4 py-3 rounded-lg shadow transition">
+        <i class="fa-solid fa-paper-plane"></i>
+        </button>
+    </footer>
+
+
+    <script src="./scripts/dataChatbot.js"></script>
+</body>
+</html>

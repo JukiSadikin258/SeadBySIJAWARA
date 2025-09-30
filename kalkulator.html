@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/logo.png" type="image/png">
+    <title>Kalkulator Jejak Air Makanan</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#53DD37',
+                        secondary: '#FF6D00',
+                        'primary-dark': '#3E9F2B',
+                        'primary-light': '#C0EAB7',
+                        'secondary-light': '#F8B600',
+                        softabu : '#F4F4F6',
+                        hitam : '#010101',
+                        putih : '#F9F9F9',
+                        'warna-latar': '#FFF6E3',
+                    },
+                    fontFamily: {
+                        poppins : ['Poppins', 'sans-serif'],
+                        spicy : ['Spicy Rice', 'cursive'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        @font-face {
+        font-family: 'Poppins';
+        src: url('./assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+        }
+        @font-face {
+        font-family: 'Poppins';
+        src: url('./assets/fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+        font-weight: 600;
+        font-style: semibold;
+        }
+        
+        @font-face {
+        font-family: 'Spicy Rice';
+        src: url('./assets/fonts/Spicy_Rice/SpicyRice-Regular.ttf') format('truetype');
+        font-weight: 700;
+        font-style: bold;
+        }
+
+        body {
+        font-family: 'Poppins', sans-serif;
+        }
+
+        ::-webkit-scrollbar {
+        width: 10px
+        }
+
+        ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+        background: #53DD37;
+        border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+        background: #3E9F2B;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen font-poppins">
+
+    <header class="relative w-full max-w-screen overflow-x-hidden h-24 bg-cover bg-primary/30 bg-center px-4"
+        style="background-image: url(assets/image/navcalc.png); box-shadow: 0 8px 10px -2px rgba(0,0,0,0.25)">
+
+        <img src="./assets/image/penabgcalc.png" alt="Background" class="absolute inset-0 w-full h-full object-cover opacity-40" />
+
+        <img src="./assets/image/bgCatPutih.png" alt="" class="absolute left-1/2 -translate-x-1/2 top-6 h-14 object-contain z-10" />
+
+        <div class="relative w-full h-full grid grid-cols-3">
+        <a href="./index.html" class="text-green-700 hover:text-green-800 font-semibold text-sm sm:text-base pl-2 mt-4 z-20"> ← Kembali </a>
+
+        <h1 class="text-center my-auto text-2xl md:text-4xl font-spicy font-bold text-black z-20"><span class="text-[#3E9F2B]">Se</span><span class="text-[#53DD37]">ad</span>Count</h1>
+        </div>
+    </header>
+
+    <section class="container mx-auto px-4 py-8 max-w-4xl">
+        <div class="text-center mb-8">
+            <h1 class="font-bold font-spicy text-center mb-2 md:mb-4 text-shadow-lg text-shadow-primary text-3xl md:text-4xl text-primary-dark">Kalkulator Jejak Air Dalam Makanan</h1>
+            <p class="text-gray-600">Hitung berapa banyak air yang digunakan untuk memproduksi makanan Anda</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-8">
+
+            <!-- Gambar makanan dibuat du Canva https://www.canva.com/design/DAGwnQojQbs/qdcinAZeewWA2z1ZE123xg/edit -->
+            <div class="food-item bg-white rounded-lg shadow-md p-4 cursor-pointer border-2 border-transparent hover:border-primary transition-all" 
+                data-food="beef" data-water="81" data-unit="100g">
+                <img src="./assets/image/dagingSapi.png" alt="Daging Sapi" class="w-20 h-20 mx-auto mb-3 rounded-lg object-cover">
+                <h3 class="text-sm font-semibold text-center text-gray-800">Daging Sapi</h3>
+                <p class="text-xs text-gray-500 text-center">100g</p>
+                <div class="quantity-controls mt-3 flex items-center justify-center space-x-2">
+                    <button class="quantity-btn minus w-6 h-6 bg-gray-200 rounded-full text-xs font-bold hover:bg-gray-300">-</button>
+                    <span class="quantity text-sm font-semibold w-8 text-center">0</span>
+                    <button class="quantity-btn plus w-6 h-6 bg-primary text-white rounded-full text-xs font-bold hover:bg-green-600">+</button>
+                </div>
+            </div>
+
+            <div class="food-item bg-white rounded-lg shadow-md p-4 cursor-pointer border-2 border-transparent hover:border-primary transition-all" 
+                data-food="chicken" data-water="24" data-unit="100g">
+                <img src="./assets/image/dagingAyam.png" alt="Nasi Putih" class="w-20 h-20 mx-auto mb-3 rounded-lg object-cover">
+                <h3 class="text-sm font-semibold text-center text-gray-800">Daging Ayam</h3>
+                <p class="text-xs text-gray-500 text-center">100g</p>
+                <div class="quantity-controls mt-3 flex items-center justify-center space-x-2">
+                    <button class="quantity-btn minus w-6 h-6 bg-gray-200 rounded-full text-xs font-bold hover:bg-gray-300">-</button>
+                    <span class="quantity text-sm font-semibold w-8 text-center">0</span>
+                    <button class="quantity-btn plus w-6 h-6 bg-primary text-white rounded-full text-xs font-bold hover:bg-green-600">+</button>
+                </div>
+            </div>
+
+            <div class="food-item bg-white rounded-lg shadow-md p-4 cursor-pointer border-2 border-transparent hover:border-primary transition-all" 
+                data-food="lamb" data-water="46" data-unit="100g">
+                <img src="./assets/image/dagingkambing.png" alt="Daging Ayam" class="w-20 h-20 mx-auto mb-3 rounded-lg object-cover">
+                <h3 class="text-sm font-semibold text-center text-gray-800">Daging Kambing</h3>
+                <p class="text-xs text-gray-500 text-center">100g</p>
+                <div class="quantity-controls mt-3 flex items-center justify-center space-x-2">
+                    <button class="quantity-btn minus w-6 h-6 bg-gray-200 rounded-full text-xs font-bold hover:bg-gray-300">-</button>
+                    <span class="quantity text-sm font-semibold w-8 text-center">0</span>
+                    <button class="quantity-btn plus w-6 h-6 bg-primary text-white rounded-full text-xs font-bold hover:bg-green-600">+</button>
+                </div>
+            </div>
+
+            <div class="food-item bg-white rounded-lg shadow-md p-4 cursor-pointer border-2 border-transparent hover:border-primary transition-all" 
+                data-food="fish" data-water="26" data-unit="100">
+                <img src="./assets/image/dagingIkan.png" alt="Telur" class="w-20 h-20 mx-auto mb-3 rounded-lg object-cover">
+                <h3 class="text-sm font-semibold text-center text-gray-800">Daging Ikan</h3>
+                <p class="text-xs text-gray-500 text-center">100g</p>
+                <div class="quantity-controls mt-3 flex items-center justify-center space-x-2">
+                    <button class="quantity-btn minus w-6 h-6 bg-gray-200 rounded-full text-xs font-bold hover:bg-gray-300">-</button>
+                    <span class="quantity text-sm font-semibold w-8 text-center">0</span>
+                    <button class="quantity-btn plus w-6 h-6 bg-primary text-white rounded-full text-xs font-bold hover:bg-green-600">+</button>
+                </div>
+            </div>
+
+            <div class="food-item bg-white rounded-lg shadow-md p-4 cursor-pointer border-2 border-transparent hover:border-primary transition-all" 
+                data-food="egg" data-water="8" data-unit="50g">
+                <img src="./assets/image/telur.png" alt="Telur" class="w-20 h-20 mx-auto mb-3 rounded-lg object-cover">
+                <h3 class="text-sm font-semibold text-center text-gray-800">Telur</h3>
+                <p class="text-xs text-gray-500 text-center">1 butir</p>
+                <div class="quantity-controls mt-3 flex items-center justify-center space-x-2">
+                    <button class="quantity-btn minus w-6 h-6 bg-gray-200 rounded-full text-xs font-bold hover:bg-gray-300">-</button>
+                    <span class="quantity text-sm font-semibold w-8 text-center">0</span>
+                    <button class="quantity-btn plus w-6 h-6 bg-primary text-white rounded-full text-xs font-bold hover:bg-green-600">+</button>
+                </div>
+            </div>
+
+            <div class="food-item bg-white rounded-lg shadow-md p-4 cursor-pointer border-2 border-transparent hover:border-primary transition-all" 
+                data-food="rice" data-water="12" data-unit="100g">
+                <img src="./assets/image/nasi.png" alt="Kentang" class="w-20 h-20 mx-auto mb-3 rounded-lg object-cover">
+                <h3 class="text-sm font-semibold text-center text-gray-800">Nasi</h3>
+                <p class="text-xs text-gray-500 text-center">100g</p>
+                <div class="quantity-controls mt-3 flex items-center justify-center space-x-2">
+                    <button class="quantity-btn minus w-6 h-6 bg-gray-200 rounded-full text-xs font-bold hover:bg-gray-300">-</button>
+                    <span class="quantity text-sm font-semibold w-8 text-center">0</span>
+                    <button class="quantity-btn plus w-6 h-6 bg-primary text-white rounded-full text-xs font-bold hover:bg-green-600">+</button>
+                </div>
+            </div>
+
+            <div class="food-item bg-white rounded-lg shadow-md p-4 cursor-pointer border-2 border-transparent hover:border-primary transition-all" 
+                data-food="tofu" data-water="20" data-unit="100g">
+                <img src="./assets/image/TahuTempe.png" alt="Tahu" class="w-20 h-20 mx-auto mb-3 rounded-lg object-cover">
+                <h3 class="text-sm font-semibold text-center text-gray-800">Tahu Tempe</h3>
+                <p class="text-xs text-gray-500 text-center">100g</p>
+                <div class="quantity-controls mt-3 flex items-center justify-center space-x-2">
+                    <button class="quantity-btn minus w-6 h-6 bg-gray-200 rounded-full text-xs font-bold hover:bg-gray-300">-</button>
+                    <span class="quantity text-sm font-semibold w-8 text-center">0</span>
+                    <button class="quantity-btn plus w-6 h-6 bg-primary text-white rounded-full text-xs font-bold hover:bg-green-600">+</button>
+                </div>
+            </div>
+
+            <div class="food-item bg-white rounded-lg shadow-md p-4 cursor-pointer border-2 border-transparent hover:border-primary transition-all" 
+                data-food="potato" data-water="4" data-unit="100g">
+                <img src="./assets/image/kentang.png" alt="Kentang" class="w-20 h-20 mx-auto mb-3 rounded-lg object-cover">
+                <h3 class="text-sm font-semibold text-center text-gray-800">Kentang</h3>
+                <p class="text-xs text-gray-500 text-center">100g</p>
+                <div class="quantity-controls mt-3 flex items-center justify-center space-x-2">
+                    <button class="quantity-btn minus w-6 h-6 bg-gray-200 rounded-full text-xs font-bold hover:bg-gray-300">-</button>
+                    <span class="quantity text-sm font-semibold w-8 text-center">0</span>
+                    <button class="quantity-btn plus w-6 h-6 bg-primary text-white rounded-full text-xs font-bold hover:bg-green-600">+</button>
+                </div>
+            </div>
+
+            <div class="food-item bg-white rounded-lg shadow-md p-4 cursor-pointer border-2 border-transparent hover:border-primary transition-all" 
+                data-food="sweet potato" data-water="4" data-unit="200g">
+                <img src="./assets/image/ubiUngu.png" alt="Ubi Ungu" class="w-20 h-20 mx-auto mb-3 rounded-lg object-cover">
+                <h3 class="text-sm font-semibold text-center text-gray-800">Ubi Ungu</h3>
+                <p class="text-xs text-gray-500 text-center">200g</p>
+                <div class="quantity-controls mt-3 flex items-center justify-center space-x-2">
+                    <button class="quantity-btn minus w-6 h-6 bg-gray-200 rounded-full text-xs font-bold hover:bg-gray-300">-</button>
+                    <span class="quantity text-sm font-semibold w-8 text-center">0</span>
+                    <button class="quantity-btn plus w-6 h-6 bg-primary text-white rounded-full text-xs font-bold hover:bg-green-600">+</button>
+                </div>
+            </div>
+
+            <div class="food-item bg-white rounded-lg shadow-md p-4 cursor-pointer border-2 border-transparent hover:border-primary transition-all" 
+                data-food="cassava" data-water="4" data-unit="200g">
+                <img src="./assets/image/singkong.png" alt="Singkong" class="w-20 h-20 mx-auto mb-3 rounded-lg object-cover">
+                <h3 class="text-sm font-semibold text-center text-gray-800">Singkong</h3>
+                <p class="text-xs text-gray-500 text-center">200g</p>
+                <div class="quantity-controls mt-3 flex items-center justify-center space-x-2">
+                    <button class="quantity-btn minus w-6 h-6 bg-gray-200 rounded-full text-xs font-bold hover:bg-gray-300">-</button>
+                    <span class="quantity text-sm font-semibold w-8 text-center">0</span>
+                    <button class="quantity-btn plus w-6 h-6 bg-primary text-white rounded-full text-xs font-bold hover:bg-green-600">+</button>
+                </div>
+            </div>
+
+            <div class="food-item bg-white rounded-lg shadow-md p-4 cursor-pointer border-2 border-transparent hover:border-primary transition-all" 
+                data-food="vegetables" data-water="3" data-unit="200g">
+                <img src="./assets/image/sayurSayuran.png" alt="Roti" class="w-20 h-20 mx-auto mb-3 rounded-lg object-cover">
+                <h3 class="text-sm font-semibold text-center text-gray-800">Sayur</h3>
+                <p class="text-xs text-gray-500 text-center">200g</p>
+                <div class="quantity-controls mt-3 flex items-center justify-center space-x-2">
+                    <button class="quantity-btn minus w-6 h-6 bg-gray-200 rounded-full text-xs font-bold hover:bg-gray-300">-</button>
+                    <span class="quantity text-sm font-semibold w-8 text-center">0</span>
+                    <button class="quantity-btn plus w-6 h-6 bg-primary text-white rounded-full text-xs font-bold hover:bg-green-600">+</button>
+                </div>
+            </div>
+
+            <div class="food-item bg-white rounded-lg shadow-md p-4 cursor-pointer border-2 border-transparent hover:border-primary transition-all" 
+                data-food="fruits" data-water="7" data-unit="150g">
+                <img src="./assets/image/buahBuahan.png " alt="Roti" class="w-20 h-20 mx-auto mb-3 rounded-lg object-cover">
+                <h3 class="text-sm font-semibold text-center text-gray-800">Buah</h3>
+                <p class="text-xs text-gray-500 text-center">150g</p>
+                <div class="quantity-controls mt-3 flex items-center justify-center space-x-2">
+                    <button class="quantity-btn minus w-6 h-6 bg-gray-200 rounded-full text-xs font-bold hover:bg-gray-300">-</button>
+                    <span class="quantity text-sm font-semibold w-8 text-center">0</span>
+                    <button class="quantity-btn plus w-6 h-6 bg-primary text-white rounded-full text-xs font-bold hover:bg-green-600">+</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- tombol Hitung -->
+        <div class="text-center">
+            <button id="calculateBtn" class="px-6 sm:px-8 py-2 sm:py-3 text-white rounded-xl bg-gradient-to-r from-primary-dark via-primary to-primary-dark hover:scale-105 cursor-pointer transition-all duration-300">
+                Hitung Jejak Air
+            </button>
+        </div>
+    </section>
+
+
+    <!-- hasil kalkulasi -->
+    <div id="resultModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-8 max-w-2xl mx-4 relative max-h-[90vh] overflow-y-auto">
+            <button id="closeModal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl font-bold">&times;</button>
+            <div class="text-center">
+                <i class="fa-solid fa-droplet text-blue-500 text-2xl mb-2"></i>
+                <h3 class="text-xl font-bold text-blue-500 mb-2">Hasil Perhitungan Jejak Air</h3>
+                <div id="resultContent" class="text-gray-600 mb-4">
+                </div>
+
+                <div class="text-3xl font-bold text-blue-400 mb-2">
+                    <span id="totalWater">0</span> Liter
+                </div>
+                <p class="text-sm text-gray-500 mb-6">Total air yang digunakan</p>
+                
+                
+                <div id="tipsSection" class="bg-gray-50 rounded-lg p-4 text-left">
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Section CTA Join Komunitas -->
+    <section class="relative bg-primary-light pt-6 pb-10 px-6 sm:px-10 lg:px-16 rounded-t-[75px] mt-8">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
+
+        <div class="space-y-6 text-center lg:text-left">
+            <h2 class="text-3xl sm:text-4xl font-bold text-hitam leading-tight">
+            Bergabung dengan <span class="text-primary-dark">Komunitas SEAD</span>
+            </h2>
+            <p class="text-lg text-hitam max-w-xl mx-auto lg:mx-0">
+            Jadi bagian dari gerakan positif untuk menciptakan perubahan nyata. 
+            Dapatkan inspirasi, dukungan, dan koneksi dengan orang-orang yang 
+            memiliki visi sama untuk masa depan berkelanjutan.
+            </p>
+            <div>
+            <a href="https://whatsapp.com/channel/0029VbB9LijFMqrVl63nIV1R" target="_blank"
+                class="inline-block px-6 sm:px-8 py-2 sm:py-3 text-white rounded-xl bg-gradient-to-r from-primary-dark via-primary to-primary-dark hover:scale-105 cursor-pointer transition-all duration-300">
+                Gabung Sekarang
+            </a>
+            </div>
+        </div>
+
+        <div class="flex justify-center lg:justify-end">
+            <img src="./assets/image/community.png" alt="Komunitas SEAD" class="w-64 sm:w-80 lg:w-96 drop-shadow-lg" />
+            <!-- sc: https://www.flaticon.com/free-icon/community_17811354?term=community&page=1&position=10&origin=search&related_id=17811354 -->
+        </div>
+        </div>
+    </section>
+
+    <script src="./scripts/kalkulator.js"></script>
+</body>
+</html>
