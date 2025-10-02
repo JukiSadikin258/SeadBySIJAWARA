@@ -60,10 +60,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeBtn = document.getElementById('closePopup');
 
     form.addEventListener('submit', function(e) {
-        e.preventDefault(); // biar nggak reload halaman
-        popup.classList.remove('hidden'); // tampilkan popup
+        e.preventDefault(); 
+        popup.classList.remove('hidden'); 
     });
 
     closeBtn.addEventListener('click', function() {
-        popup.classList.add('hidden'); // sembunyikan popup
+        popup.classList.add('hidden');
     });
